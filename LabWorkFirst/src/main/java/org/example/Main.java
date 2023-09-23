@@ -1,19 +1,33 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Library library = new Library();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        library.addBook(new Book("Book1", "Author1", "1234567890", 2020));
+        library.addBook(new Book("Book2", "Author2", "0987654321", 2019));
+        library.addBook(new Book("Book3", "Author3", "5432109876", 2021));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        System.out.println("All Books:");
+        library.showAllBooks();
+
+        String searchTitle = "Book2";
+        Book foundBook = library.findBookByTitle(searchTitle);
+        if (foundBook != null) {
+            System.out.println("Found Book: " + foundBook.toString());
+        } else {
+            System.out.println("Book with title \"" + searchTitle + "\" not found.");
         }
+
+        String isbnToRemove = "1234567890";
+        if (library.removeBookByIsbn(isbnToRemove)) {
+            System.out.println("Book with ISBN " + isbnToRemove + " removed successfully.");
+        } else {
+            System.out.println("Book with ISBN " + isbnToRemove + " not found.");
+        }
+
+        System.out.println("Updated Books:");
+        library.showAllBooks();
     }
 }
