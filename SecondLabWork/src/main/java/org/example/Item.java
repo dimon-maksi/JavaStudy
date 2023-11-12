@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class Item {
+public abstract class Item {
     private String title;
     private static int uniqueID = 0;
     private boolean isBorrowed = false;
