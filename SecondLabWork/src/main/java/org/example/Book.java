@@ -3,7 +3,7 @@ package org.example;
 public class Book extends Item{
 
     private String author;
-    private int bookID;
+    private final int bookID;
     Book(String title, String author){
         bookID = getUniqueID();
         setTitle(title);
@@ -25,5 +25,9 @@ public class Book extends Item{
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public int getBookID() {
+        return bookID;
     }
 }

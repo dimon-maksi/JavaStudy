@@ -2,7 +2,7 @@ package org.example;
 
 public class DVD extends Item{
     private int duration;
-    private int dvdID;
+    private final int dvdID;
     DVD(String title, int duration){
         dvdID = getUniqueID();
         setTitle(title);
@@ -24,5 +24,9 @@ public class DVD extends Item{
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public int getDvdID() {
+        return dvdID;
     }
 }
