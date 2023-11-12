@@ -5,6 +5,10 @@ abstract class Item {
     private static int uniqueID = 0;
     private boolean isBorrowed = false;
 
+    Item()
+    {
+        uniqueID++;
+    }
     public String getTitle() {
         return title;
     }
