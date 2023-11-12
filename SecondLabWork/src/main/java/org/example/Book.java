@@ -2,7 +2,13 @@ package org.example;
 
 public class Book extends Item{
 
-    private String autor;
+    private String author;
+    private int bookID;
+    Book(String title, String author){
+        bookID = getUniqueID();
+        setTitle(title);
+        setAuthor(author);
+    }
     @Override
     void borrowItem() {
         setBorrowed(true);
@@ -13,11 +19,11 @@ public class Book extends Item{
         setBorrowed(false);
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
