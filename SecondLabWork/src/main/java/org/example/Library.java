@@ -1,12 +1,13 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class Library implements IManageable{
     private final List<Item> items;
     private final List<Patron> patrons;
-    Library(){
+    public Library(){
         items = new ArrayList<Item>();
         patrons = new ArrayList<Patron>();
     }
@@ -51,5 +52,10 @@ public class Library implements IManageable{
     {
         patron.returnItem(item);
         item.setBorrowed(false);
+    }
+
+    public List<Item> getItems()
+    {
+        return items;
     }
 }

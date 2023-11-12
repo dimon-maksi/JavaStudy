@@ -4,7 +4,7 @@ public class Book extends Item{
 
     private String author;
     private final int bookID;
-    Book(String title, String author){
+    public Book(String title, String author){
         bookID = getUniqueID();
         setTitle(title);
         setAuthor(author);

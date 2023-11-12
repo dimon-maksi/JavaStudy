@@ -26,6 +26,11 @@ public class Patron {
     public void setName(String name) {
         this.name = name;
     }
+
+    public List<Item> getBorrowedItems() {
+        return borrowedItems;
+    }
+
     public void returnItem (Item item)
     {
         borrowedItems.remove(item);
