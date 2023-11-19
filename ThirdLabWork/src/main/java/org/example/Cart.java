@@ -9,11 +9,11 @@ public class Cart {
         listOfProducts = new ArrayList<>();
     }
 
-    void AddProductToCart(Product product) {
+    public void AddProductToCart(Product product) {
         listOfProducts.add(product);
     }
 
-    void RemoveProductFromCart(Product product) {
+    public void RemoveProductFromCart(Product product) {
         listOfProducts.remove(product);
     }
 

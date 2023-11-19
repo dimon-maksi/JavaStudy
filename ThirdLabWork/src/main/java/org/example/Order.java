@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private final List<Product> orderItems;
+    public final List<Product> orderItems;
     private static int initialID = 0;
     private final int id;
     public String status;
