@@ -24,3 +24,8 @@ Test whether products are added/removed from the cart correctly.
 Test the functionality of placing an order.
 
 Test the functionality of getting the order status. 
+
+# Fourth LabWork
+
+## Palindrome
+A function that checks whether a word is a palindrome.
