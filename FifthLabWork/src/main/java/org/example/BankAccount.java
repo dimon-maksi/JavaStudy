@@ -16,9 +16,15 @@ public class BankAccount {
         balance = balance.add(amount);
     }
 
-    public void withdraw(BigDecimal amount){
+    public void withdraw(BigDecimal amount) throws NegativeAmountException, InsufficientFundsException {
+        if (balance.compareTo(BigDecimal.valueOf(0)) < 0){
+            throw new NegativeAmountException("There are no funds in your account");
+        } else if (balance.compareTo(amount) < 0){
+            throw new InsufficientFundsException("There are not enough funds in your account");
+        } else {
+            balance = balance.subtract(amount);
+        }
 
-        balance = balance.subtract(amount);
     }
     public String getAccountSummary() {
         String str =accountName+" "+ID+" "+balance ;
