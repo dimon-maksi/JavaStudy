@@ -33,3 +33,8 @@ A function that checks whether a word is a palindrome.
 # Fifth LabWork
 A program that allows you to create, find, and manipulate bank accounts. 
 The program implements exception handling.
+
+# Sixth LabWork
+The program allows you to book seats in the cinema. 
+Added exceptions in case of seat occupancy. 
+The program is covered by unit tests.
